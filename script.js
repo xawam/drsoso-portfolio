@@ -6,6 +6,28 @@ let trigger;
 
 document.querySelector('#year').textContent = new Date().getFullYear();
 
+// Fade sections in as they scroll into view; everything shows at once without IntersectionObserver.
+const revealed = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-in');
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  revealed.forEach(el => observer.observe(el));
+} else {
+  revealed.forEach(el => el.classList.add('is-in'));
+}
+
+// Keep the reader on the same section when switching language.
+document.querySelectorAll('[data-lang-switch]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (location.hash) link.hash = location.hash;
+  });
+});
+
 if (typeof dialog.showModal === 'function') {
   document.querySelectorAll('[data-video-id]').forEach(link => {
     link.addEventListener('click', event => {

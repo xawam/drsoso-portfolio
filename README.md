@@ -7,6 +7,7 @@ Run `python3 -m http.server 8000 --bind 127.0.0.1` in this folder and open `http
 
 ## Files
 - `index.html`: copy, selected work, source links and dated public-profile statistics.
+- `ar/index.html`: Arabic (RTL) version of the same page, sharing `styles.css` and `script.js`. Keep both pages in sync; Arabic copy is MSA and should be proofread by Dr. Soso.
 - `styles.css`: responsive layout, reduced-motion and basic print styles.
 - `script.js`: on-demand TikTok player in a keyboard-accessible native dialog.
 - `assets/`: local video stills and favicon. Stills are extracted from the creator’s original videos.
