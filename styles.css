@@ -161,6 +161,12 @@ h1 span, h1 em { display: block; }
 .service li { padding: 13px 0; border-top: 1px solid rgba(28, 42, 74, .12); font-weight: 500; font-size: 15px; }
 .service li::before { content: '—'; color: var(--clay); margin-inline-end: 12px; }
 
+.also { display: flex; align-items: center; gap: 28px; margin-top: 24px; padding: 26px 32px; border: 1px solid var(--line); border-radius: var(--r); }
+.also-title { flex-shrink: 0; font-family: var(--display); font-style: italic; font-size: 26px; color: var(--clay); }
+.also ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.also li { padding: 8px 16px; border-radius: 999px; background: var(--sand); font-size: 14.5px; font-weight: 500; }
+html[dir=rtl] .also-title { font-family: var(--display-ar); font-style: normal; font-size: 22px; }
+
 /* Process */
 .process { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; counter-reset: step; }
 .process li { padding: 28px 24px 30px; border-radius: var(--r); background: var(--ivory); }
@@ -315,6 +321,8 @@ html[dir=rtl] .pillars h3 { font-size: 25px; }
   .service { padding: 32px 26px; }
   .service h3 { font-size: 36px; }
   .process { grid-template-columns: 1fr; }
+  .also { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px; }
+  .also li { font-size: 13.5px; }
   .about-copy p.big { font-size: 25px; }
   .contact { padding-block: 96px; }
   .contact::before, .contact::after { display: none; }
