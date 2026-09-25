@@ -98,7 +98,8 @@ h1 span, h1 em { display: block; }
 .head > p:last-child:not(.kicker) { font-size: 17px; color: var(--muted); }
 
 /* Reel */
-.reel { display: grid; grid-template-columns: repeat(3, 1fr) .8fr; gap: 22px; }
+.reel { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.reel-more { margin-top: 28px; }
 .clip h3 { font-size: 24px; margin-top: 18px; }
 .clip p { font-size: 14px; color: var(--muted); margin-top: 4px; }
 .cover { position: relative; display: block; aspect-ratio: 9 / 14; border-radius: var(--r); overflow: hidden; background: var(--navy); isolation: isolate; }
