@@ -1,0 +1,5 @@
+# Private project notes — never publish (GitHub Pages serves committed files)
+handoff/
+
+# macOS
+.DS_Store

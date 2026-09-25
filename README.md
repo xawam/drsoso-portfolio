@@ -1,55 +1,33 @@
 # Dr. Soso — Creator Portfolio
 
-A one-page portfolio / media kit for Dr. Soso (dentist + skincare & mesotherapy content creator).
-Plain HTML + CSS, no build step. Also exports to a PDF media kit via the print stylesheet.
+English, video-first portfolio for an Egypt-based Arabic skincare creator. Static HTML/CSS/JS; no build step or backend.
+
+## Preview
+Run `python3 -m http.server 8000 --bind 127.0.0.1` in this folder and open `http://127.0.0.1:8000`.
 
 ## Files
-- `index.html` — the page (all content lives here)
-- `styles.css` — screen + print styles
-- `assets/` — put `headshot.jpg` and any brand logos here
+- `index.html`: copy, selected work, source links and dated public-profile statistics.
+- `styles.css`: responsive layout, reduced-motion and basic print styles.
+- `script.js`: on-demand TikTok player in a keyboard-accessible native dialog.
+- `assets/`: local video stills and favicon. Stills are extracted from the creator’s original videos.
+- `handoff/`: private planning; excluded by `.gitignore`.
 
-## Editing content
-Everything is plain text in `index.html`. Replace the placeholders:
-- Stats: search for `120K`, `350K`, `8.4%`, `2.1M` (TikTok) and `18K`, `95K`, `5.1%`, `210K` (Instagram).
-- Email: search for `drsoso.review@gmail.com`.
-- Handles: search for `dr.soso_review`.
-- Brands: replace the `<span>Your brand</span>` items.
+## Updating videos
+Each video thumbnail is a normal TikTok link that works without JavaScript. To update a card, change its link, `data-video-id`, `data-video-title`, thumbnail and descriptive copy together. JavaScript opens the official TikTok player only after a click; every player includes an original-link fallback. TikTok availability varies by browser, region and privacy settings.
 
-## Adding real videos
-In the `#work` section, replace a placeholder card with a TikTok embed:
+## Content awaiting confirmation
+- Business email: hello@drsosoreviews.com. Instagram remains unconfirmed.
+- Second brand collaboration and paid/gifted classification.
+- Audience demographics and period analytics: not inferred from public views.
+- Portrait: dedicated creator-supplied photo in assets/dr-soso-portrait.jpg.
 
-```html
-<blockquote class="tiktok-embed"
-  cite="https://www.tiktok.com/@dr.soso_review/video/VIDEO_ID"
-  data-video-id="VIDEO_ID">
-  <section></section>
-</blockquote>
-```
+Public follower/like numbers are rounded snapshots, dated in the page. Update numbers and date together. The Altesse project is described as a collaboration, without claiming payment, sales or campaign results.
 
-For Instagram:
+## Hosting
+Custom domain: `https://drsosoreviews.com/`. GitHub Pages origin: `https://xawam.github.io/drsoso-portfolio/`.
+The deployed site changes only after intended files are committed and pushed to the configured branch. Review changes and stage specific files; never include private handoff files. The local draft may differ from the deployed site.
 
-```html
-<blockquote class="instagram-media"
-  data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID/">
-  <a href="https://www.instagram.com/reel/REEL_ID/"></a>
-</blockquote>
-```
+The domain is configured in repository Settings → Pages. Preserve Spaceship MX, SPF, DKIM, DMARC and autodiscovery records when maintaining website DNS. Canonical and Open Graph URLs use the custom domain.
 
-The embed scripts are already loaded at the bottom of `index.html`.
-
-## PDF media kit
-Open the page in a browser → **File → Print → Save as PDF**. Margins: **None**.
-The print stylesheet hides the nav/buttons and formats it as a clean document.
-
-## Deploy (GitHub Pages)
-```
-git add .
-git commit -m "Update portfolio"
-git push
-```
-The site rebuilds automatically. Live URL: `https://xawam.github.io/drsoso-portfolio/`
-
-## Add a custom domain later
-1. Buy a domain (e.g. `drsoso.com`).
-2. Repo → Settings → Pages → Custom domain → enter it.
-3. At the domain registrar add a CNAME record pointing to `xawam.github.io`.
+## PDF
+The two-page September 2026 kit is assets/dr-soso-media-kit.pdf, linked from the contact section. It includes dated metrics, selected videos, services and contact links. Update the PDF when metrics or the brief change.
