@@ -213,7 +213,7 @@ h1 span, h1 em { display: block; }
 .player-help a { color: var(--clay); text-decoration: underline; }
 
 /* Reveal on scroll (only when JS marks the page ready) */
-.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+.js .reveal { transform: translateY(14px); transition: transform .8s ease; }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
 /* Arabic page */
@@ -326,10 +326,10 @@ html[dir=rtl] .pillars h3 { font-size: 25px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
+  .js .reveal { transform: none; }
 }
 
 @media print {
   .site-header, .actions, .play, .video-dialog, .skip-link { display: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
+  .js .reveal { transform: none; }
 }
