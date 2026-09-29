@@ -17,7 +17,7 @@ Run `python3 -m http.server 8000 --bind 127.0.0.1` in this folder and open `http
 Each video thumbnail is a normal TikTok link that works without JavaScript. To update a card, change its link, `data-video-id`, `data-video-title`, thumbnail and descriptive copy together. JavaScript opens the official TikTok player only after a click; every player includes an original-link fallback. TikTok availability varies by browser, region and privacy settings.
 
 ## Content awaiting confirmation
-- Business email: hello@drsosoreviews.com. Instagram remains unconfirmed.
+- Business email: hello@drsosoreviews.com. Instagram: @with_dr_soso, confirmed 29 Sep 2026.
 - Second brand collaboration and paid/gifted classification.
 - Audience demographics and period analytics: not inferred from public views.
 - Portrait: dedicated creator-supplied photo in assets/dr-soso-portrait.jpg.
